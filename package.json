@@ -1,0 +1,31 @@
+{
+  "name": "ubigeos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "node-sass src/ -o dist/ --output-style compressed",
+    "watch:sass": "node-sass src/ -w -o dist/ --output-style compressed",
+    "start": "npm run watch:sass | npm run build:sass | node server.js | webpack --watch --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolassigal/ubigeos.git"
+  },
+  "author": "nicolas sigal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolassigal/ubigeos/issues"
+  },
+  "homepage": "https://github.com/nicolassigal/ubigeos#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1",
+    "webpack": "^3.3.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
