@@ -13,3 +13,4 @@ instructions to run this project
 $ npm install
 $ npm start 
 ```
+then open http://localhost:3000/ to launch the Application.
