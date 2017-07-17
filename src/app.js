@@ -1,14 +1,14 @@
 (function () {
     var ubigeosService = require('ubigeosService');
-    $.when(ubigeosService.getUbigeos()).then(function (res) {
-        for (var category in res) {
-            createTable(res[category], category);
+    ubigeosService.getUbigeos().then(function (data) {
+        for (var category in data) {
+            createCategoryTable(data[category], category);
         }
     }).catch(function (err) {
         console.log(err);
     });
 
-    function createTable(category, categoryName) {
+    function createCategoryTable(category, categoryName) {
         var table = $('<table></table>');
         var thead = $('<thead></thead>');
         thead.append('<tr><td colspan="4" class="table-title">' + categoryName.toUpperCase() + '</td></tr>');

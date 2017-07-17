@@ -1,5 +1,4 @@
 var ubigeosService = (function () {
-
     function getUbigeos() {
         var defer = $.Deferred();
         return $.get('/api/ubigeos')
